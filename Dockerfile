@@ -62,7 +62,7 @@ CMD sails
 # Code from root
 USER root
 EXPOSE 80
-ADD /home/appuser/source/project.conf /etc/nginx/sites-available/project.conf
+ADD project.conf /etc/nginx/sites-available/project.conf
 CMD ln -s /etc/nginx/sites-available/project.conf /etc/nginx/sites-enabled/project.conf
 CMD service nginx restart
 CMD usermod -s /sbin/nologin appuser
